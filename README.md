@@ -1,14 +1,25 @@
-# Kishoreinline
+# Jarvis AI Trader
 
-I build **Jarvis AI Trader**, a private Windows desk for **Indian index options** (NIFTY, SENSEX, FINNIFTY, and other BSE/NSE F&amp;O).
+Public overview of a private Windows desk for **Indian index options** (NIFTY, SENSEX, FINNIFTY, and other BSE/NSE F&amp;O).
 
-The **source code is private**. This page is the public overview — the same story as the product README, without a git clone or file tree. There is nothing here to download except these screenshots.
+The **source code is private**. This page is the product README and screenshots only — no git clone of the desks.
 
 > Not a public product you can install. Not financial advice. Live orders use the operator’s own broker account.
 
----
+## Tech stack
 
-# Jarvis AI Trader
+Same mix GitHub reports on the private desks (by lines of code):
+
+| Language | Share | Used for |
+|----------|------:|----------|
+| **C#** (.NET 8 / WPF) | **63.8%** | V4 CE and V5 PE desks, Super Order, chart, Hybrid2 |
+| **Python** | **36.1%** | Research sidecars, models, next-day packs |
+| **Other** | **0.1%** | Config / docs |
+
+![C#](https://img.shields.io/badge/C%23-63.8%25-239120?style=flat-square&logo=csharp&logoColor=white)
+![Python](https://img.shields.io/badge/Python-36.1%25-3776AB?style=flat-square&logo=python&logoColor=white)
+![.NET](https://img.shields.io/badge/.NET%208-WPF-512BD4?style=flat-square&logo=dotnet&logoColor=white)
+![Windows](https://img.shields.io/badge/Windows-desks-0078D4?style=flat-square&logo=windows&logoColor=white)
 
 Two Windows processes share the same stack: **V4** on calls (CE) and **V5** on puts (PE). Each desk owns its instrument, Hybrid profile, research sidecar, and broker credentials.
 
@@ -30,11 +41,11 @@ Research Python sidecars sit next to each desk. **Live Hybrid entries do not wai
 
 **V4 — CE (calls)** — Dashboard on a NIFTY call:
 
-![V4 CE desk](docs/screenshots/v4-ce-dashboard.png)
+<img src="docs/screenshots/v4-ce-dashboard.png" width="720" alt="V4 CE desk">
 
 **V5 — PE (puts)** — Dashboard on a NIFTY put:
 
-![V5 PE desk](docs/screenshots/v5-pe-dashboard.png)
+<img src="docs/screenshots/v5-pe-dashboard.png" width="720" alt="V5 PE desk">
 
 Both apps share the same UI and trading rules. Each has its own instrument and constraints. You can run one desk or both.
 
@@ -44,39 +55,39 @@ Same UI on V4 and V5. Captures below are from live NIFTY desks (toolbar / tabs f
 
 **Toolbar** — Load History, bar radios **1m / 2m / 3m / 5m**, Excel, **Allow trades**, Hybrid2:
 
-![Toolbar](docs/screenshots/01-toolbar.png)
+<img src="docs/screenshots/01-toolbar.png" width="720" alt="Toolbar">
 
 **Dashboard** — today’s session after the business day starts (weekday IST 09:00); empty until the first trade. Weekend keeps the last completed day. **All days** still shows every loaded session:
 
-![Dashboard](docs/screenshots/02-dashboard.png)
+<img src="docs/screenshots/02-dashboard.png" width="720" alt="Dashboard">
 
 **Grid** — minute candles, Hybrid stamps, Live Market pane:
 
-![Grid](docs/screenshots/03-grid.png)
+<img src="docs/screenshots/03-grid.png" width="720" alt="Grid">
 
 **Chart (V4 CE)** — OHLC (HA when checked), yellow SuperTrend, Entry / Target / SL, ▲/▼, pattern filters, bar radios 1m / 2m / 3m / 5m:
 
-![Chart](docs/screenshots/04-chart.png)
+<img src="docs/screenshots/04-chart.png" width="720" alt="Chart">
 
 **Chart (V5 PE)** — same Hybrid2 SuperTrend on a put. Yellow line stays on the pane even when the PE band is cheap or far above premium:
 
-![V5 PE chart](docs/screenshots/v5-pe-chart.png)
+<img src="docs/screenshots/v5-pe-chart.png" width="720" alt="V5 PE chart">
 
 **Chart footer** — day summary + one-line trade list:
 
-![Chart footer](docs/screenshots/05-chart-footer.png)
+<img src="docs/screenshots/05-chart-footer.png" width="720" alt="Chart footer">
 
 **Day profit** — every loaded session day, sized like Dashboard from starting capital:
 
-![Day profit](docs/screenshots/06-day-profit.png)
+<img src="docs/screenshots/06-day-profit.png" width="720" alt="Day profit">
 
 **Research** — option shortlist / apply contract:
 
-![Research](docs/screenshots/07-research.png)
+<img src="docs/screenshots/07-research.png" width="720" alt="Research">
 
 **Constants** — instrument, Hybrid knobs, **Find next-day settings**:
 
-![Constants](docs/screenshots/08-constants.png)
+<img src="docs/screenshots/08-constants.png" width="720" alt="Constants">
 
 ## What the desk does
 
@@ -119,4 +130,4 @@ Cheap **PE**: the chart still draws the SuperTrend line under the bars instead o
 
 ## Source
 
-The trading git (`Kishoreinline/AlgoTrading`) is **private**. Visitors to this profile can read this page and the screenshots. They cannot browse the code, clone the desks, or download the repository.
+The trading git (`Kishoreinline/AlgoTrading`) is **private**. This public repo is overview and screenshots only. Visitors cannot browse the desks, clone the source, or download the private repository.
