@@ -19,6 +19,17 @@ Same mix GitHub reports on the private desks (by lines of code):
 ![.NET](https://img.shields.io/badge/.NET%208-WPF-512BD4?style=flat-square&logo=dotnet&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-desks-0078D4?style=flat-square&logo=windows&logoColor=white)
 
+## Skills this project covers
+
+**Technology:** C# / .NET 8 / WPF, Python, ScottPlot charts, live broker Super Orders, Azure Functions, git.
+
+**AI — what is true**
+- **LLM (Cursor):** I used an LLM in Cursor to design, write, debug, and document these desks. That is LLM-assisted software engineering, not a chatbot inside the trader.
+- **Classical ML:** LightGBM, scikit-learn, and ML.NET models for research / optional target-stop-exit scores. Those are tree models, not large language models.
+- **Search / walk-forward:** scoring many Hybrid packs for next-day settings.
+
+**What this is not:** the live Hybrid2 BUY/SELL path does **not** call ChatGPT, Claude, or any other LLM. Entries are rule-based (Hybrid2 legs + SuperTrend). Live Hybrid entries do not wait on Python to send the Super Order.
+
 Two Windows processes share the same stack: **V4** on calls (CE) and **V5** on puts (PE). Each desk owns its instrument, Hybrid profile, research sidecar, and broker credentials.
 
 The app is an **intraday Super Order workstation**, not a backtest UI. It:
