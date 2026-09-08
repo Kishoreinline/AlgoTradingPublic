@@ -19,16 +19,32 @@ Same mix GitHub reports on the private desks (by lines of code):
 ![.NET](https://img.shields.io/badge/.NET%208-WPF-512BD4?style=flat-square&logo=dotnet&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-desks-0078D4?style=flat-square&logo=windows&logoColor=white)
 
-## Skills this project covers
+## Technology
 
-**Technology:** C# / .NET 8 / WPF, Python, ScottPlot charts, live broker Super Orders, Azure Functions, git.
+| Area | What I used |
+|------|-------------|
+| **Languages** | C# (~64%) and Python (~36%) |
+| **Desks** | .NET 8 WPF — two processes: V4 (CE / calls) and V5 (PE / puts) |
+| **UI** | ScottPlot OHLC chart, Dashboard, Grid, Day profit, Constants, Research, Logs |
+| **Market data** | 1-minute OHLC history, live WebSocket ticks, bar sizes **1m / 2m / 3m / 5m** |
+| **Trading rules** | Hybrid2 (Spike, Marubozu, Trough, UT Bot, HP, SuperTrend), plus Basic / Trough / Trail / Spike / Hybrid |
+| **Broker** | Super Order: LIMIT BUY with Target and Stop attached; paper mode when live orders are off |
+| **Cloud / ops** | Azure Functions proxy, Application Insights, git / GitHub (source stays private) |
+| **Indicators** | SuperTrend, ADX / DI, Heikin Ashi display, Skender stock indicators |
 
-**AI — what is true**
-- **LLM (Cursor):** I used an LLM in Cursor to design, write, debug, and document these desks. That is LLM-assisted software engineering, not a chatbot inside the trader.
-- **Classical ML:** LightGBM, scikit-learn, and ML.NET models for research / optional target-stop-exit scores. Those are tree models, not large language models.
-- **Search / walk-forward:** scoring many Hybrid packs for next-day settings.
+The workstation is Windows-only. Secrets (broker token, proxy) stay on the operator’s machine and are not in this public repo.
 
-**What this is not:** the live Hybrid2 BUY/SELL path does **not** call ChatGPT, Claude, or any other LLM. Entries are rule-based (Hybrid2 legs + SuperTrend). Live Hybrid entries do not wait on Python to send the Super Order.
+## AI
+
+This project is how I practiced AI with **Cursor**. The split below is intentional so nothing is overstated.
+
+| Kind | What is true |
+|------|----------------|
+| **LLM** | I used an LLM **in Cursor** to design, write, debug, and document the desks and this page. That is LLM-assisted software engineering. |
+| **Classical ML** | LightGBM, scikit-learn (Random Forest), and ML.NET LightGBM for research and optional target / stop / exit scores. These are **tree models**, not language models. |
+| **Search** | Walk-forward / next-day pack scoring: many Hybrid parameter packs ranked from history. |
+
+**Not true (on purpose):** the live Hybrid2 BUY/SELL path does **not** call ChatGPT, Claude, OpenAI, or any other LLM. Entries are **rule-based**. Live Hybrid Super Orders do **not** wait on Python.
 
 Two Windows processes share the same stack: **V4** on calls (CE) and **V5** on puts (PE). Each desk owns its instrument, Hybrid profile, research sidecar, and broker credentials.
 
