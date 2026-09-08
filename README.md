@@ -1,10 +1,8 @@
 # Jarvis AI Trader
 
-Public overview of a private Windows desk for **Indian index options** (NIFTY, SENSEX, FINNIFTY, and other BSE/NSE F&amp;O).
+This is **not a public product**. I built it to **learn AI and Cursor**, and to **demonstrate my AI skills**. The desks trade Indian index options (NIFTY, SENSEX, FINNIFTY, and other BSE/NSE F&amp;O) as a private learning project.
 
-The **source code is private**. This page is the product README and screenshots only — no git clone of the desks.
-
-> Not a public product you can install. Not financial advice. Live orders use the operator’s own broker account.
+The **source code is private**. This page is an overview and blurred screenshots only — no git clone of the desks.
 
 ## Tech stack
 
@@ -41,11 +39,11 @@ Research Python sidecars sit next to each desk. **Live Hybrid entries do not wai
 
 **V4 — CE (calls)** — Dashboard on a NIFTY call:
 
-<img src="docs/screenshots/v4-ce-dashboard.png" width="720" alt="V4 CE desk">
+<img src="docs/screenshots/v4-ce-dashboard.png" width="360" alt="V4 CE desk">
 
 **V5 — PE (puts)** — Dashboard on a NIFTY put:
 
-<img src="docs/screenshots/v5-pe-dashboard.png" width="720" alt="V5 PE desk">
+<img src="docs/screenshots/v5-pe-dashboard.png" width="360" alt="V5 PE desk">
 
 Both apps share the same UI and trading rules. Each has its own instrument and constraints. You can run one desk or both.
 
@@ -55,39 +53,39 @@ Same UI on V4 and V5. Captures below are from live NIFTY desks (toolbar / tabs f
 
 **Toolbar** — Load History, bar radios **1m / 2m / 3m / 5m**, Excel, **Allow trades**, Hybrid2:
 
-<img src="docs/screenshots/01-toolbar.png" width="720" alt="Toolbar">
+<img src="docs/screenshots/01-toolbar.png" width="360" alt="Toolbar">
 
 **Dashboard** — today’s session after the business day starts (weekday IST 09:00); empty until the first trade. Weekend keeps the last completed day. **All days** still shows every loaded session:
 
-<img src="docs/screenshots/02-dashboard.png" width="720" alt="Dashboard">
+<img src="docs/screenshots/02-dashboard.png" width="360" alt="Dashboard">
 
 **Grid** — minute candles, Hybrid stamps, Live Market pane:
 
-<img src="docs/screenshots/03-grid.png" width="720" alt="Grid">
+<img src="docs/screenshots/03-grid.png" width="360" alt="Grid">
 
 **Chart (V4 CE)** — OHLC (HA when checked), yellow SuperTrend, Entry / Target / SL, ▲/▼, pattern filters, bar radios 1m / 2m / 3m / 5m:
 
-<img src="docs/screenshots/04-chart.png" width="720" alt="Chart">
+<img src="docs/screenshots/04-chart.png" width="360" alt="Chart">
 
 **Chart (V5 PE)** — same Hybrid2 SuperTrend on a put. Yellow line stays on the pane even when the PE band is cheap or far above premium:
 
-<img src="docs/screenshots/v5-pe-chart.png" width="720" alt="V5 PE chart">
+<img src="docs/screenshots/v5-pe-chart.png" width="360" alt="V5 PE chart">
 
 **Chart footer** — day summary + one-line trade list:
 
-<img src="docs/screenshots/05-chart-footer.png" width="720" alt="Chart footer">
+<img src="docs/screenshots/05-chart-footer.png" width="360" alt="Chart footer">
 
 **Day profit** — every loaded session day, sized like Dashboard from starting capital:
 
-<img src="docs/screenshots/06-day-profit.png" width="720" alt="Day profit">
+<img src="docs/screenshots/06-day-profit.png" width="360" alt="Day profit">
 
 **Research** — option shortlist / apply contract:
 
-<img src="docs/screenshots/07-research.png" width="720" alt="Research">
+<img src="docs/screenshots/07-research.png" width="360" alt="Research">
 
 **Constants** — instrument, Hybrid knobs, **Find next-day settings**:
 
-<img src="docs/screenshots/08-constants.png" width="720" alt="Constants">
+<img src="docs/screenshots/08-constants.png" width="360" alt="Constants">
 
 ## What the desk does
 
